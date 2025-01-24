@@ -5,14 +5,13 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuLabel,
-  DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuContent,
   DropdownMenuCheckboxItem,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { SunIcon, MoonIcon, SunMoonIcon, Sun, SunDimIcon } from "lucide-react";
+import { SunIcon, MoonIcon, SunMoonIcon } from "lucide-react";
 
 const ThemeToggler = () => {
   const [mounted, setMounted] = useState(false);
