@@ -1,6 +1,10 @@
-import { Button } from "@/components/ui/button";
+const delay = (ms: number) =>
+  new Promise((res) => {
+    setTimeout(res, ms);
+  });
 
-const HomePage = () => {
+const HomePage = async () => {
+  await delay(1000);
   return (
     <>
       <h1>e shop</h1>
