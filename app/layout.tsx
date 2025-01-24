@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { APP_NAME } from "@/lib/constants";
-import { APP_DESCRIPTION } from "@/lib/constants";
+import { APP_NAME, SERVER_URL, APP_DESCRIPTION } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,6 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${APP_NAME}`,
   description: `${APP_DESCRIPTION}`,
+  metadataBase: new URL(SERVER_URL),
 };
 
 export default function RootLayout({
