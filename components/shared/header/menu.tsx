@@ -45,6 +45,11 @@ const Menu = () => {
                 Cart
               </Link>
             </Button>
+            <Button asChild>
+              <Link href="/sign-in">
+                <UserIcon size={24} /> Sign In
+              </Link>
+            </Button>
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>
