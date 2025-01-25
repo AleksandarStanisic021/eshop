@@ -1,4 +1,4 @@
-import { ShoppingCart, UserIcon } from "lucide-react";
+import Menu from "./menu";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -23,19 +23,8 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <div className="space-x-2">
-          <ThemeToggler />
-          <Button asChild variant="ghost">
-            <Link href="/cart">
-              <ShoppingCart size={24} /> Cart
-            </Link>
-          </Button>
-          <Button asChild>
-            <Link href="/sign-in">
-              <UserIcon size={24} /> Sign In
-            </Link>
-          </Button>
-        </div>
+
+        <Menu />
       </div>
     </header>
   );
