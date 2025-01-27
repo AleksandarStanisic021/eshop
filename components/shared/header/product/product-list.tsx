@@ -1,3 +1,5 @@
+import ProductCard from "./product-card";
+
 const ProductList = ({ data, title }: { data: any; title?: string }) => {
   return (
     <div className="my-10">
@@ -5,8 +7,10 @@ const ProductList = ({ data, title }: { data: any; title?: string }) => {
       {data.length > 0 ? (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {data.map((p: any) => (
-              <div key={p.name}>{p.name}</div>
+            {data.map((prod: any) => (
+              <>
+                <ProductCard key={prod.name} product={prod}></ProductCard>
+              </>
             ))}
           </div>
         </>

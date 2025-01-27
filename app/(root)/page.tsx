@@ -10,7 +10,7 @@ const HomePage = async () => {
   await delay(1000);
   return (
     <>
-      <ProductList data={sampleData.products} title="Newest Product data" />
+      <ProductList data={sampleData.products} title="Newest Product's Data" />
     </>
   );
 };
