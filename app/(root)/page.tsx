@@ -1,16 +1,11 @@
-import sampleData from "@/db/sample-data";
 import ProductList from "@/components/shared/header/product/product-list";
-
-const delay = (ms: number) =>
-  new Promise((res) => {
-    setTimeout(res, ms);
-  });
+import { getLatestProducts } from "@/lib/actions/product.actions";
 
 const HomePage = async () => {
-  await delay(1000);
+  const products = await getLatestProducts();
   return (
     <>
-      <ProductList data={sampleData.products} title="Newest Product's Data" />
+      <ProductList data={products} title="Newest Product's Data" />
     </>
   );
 };
