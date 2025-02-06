@@ -9,12 +9,19 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import SignInForm from "./sign-in-form";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Sign In",
 };
 
-const SignInPage = () => {
+const SignInPage = async () => {
+  const session = await auth();
+
+  if (session) {
+    return redirect("/");
+  }
   return (
     <div className="w-full max-w-full mx-auto">
       <Card className="text-center w-13">
