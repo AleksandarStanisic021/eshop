@@ -18,13 +18,11 @@ const SignInButton = () => {
     </Button>
   );
 };
-
 const SignInForm = () => {
   const [data, action] = useActionState(signInWithCredentials, {
     message: "",
     success: false,
   });
-
   return (
     <form action={action}>
       <div className="space-y-6">
