@@ -13,3 +13,8 @@ export function formatNumber(num: number): string {
   const [int, dec] = num.toString().split(".");
   return dec ? `${int}.${dec.padEnd(2, "0")}` : `${int}.00`;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function formatError(error: any) {
+  console.log(error);
+}
