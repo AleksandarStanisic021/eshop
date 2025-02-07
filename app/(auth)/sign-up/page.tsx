@@ -8,15 +8,16 @@ import {
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import SignInForm from "./sign-in-form";
+import SignUpForm from "./sign-up-form";
+
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Sign In",
+  title: "Sign Un",
 };
 
-const SignInPage = async (props: {
+const SignUpPage = async (props: {
   searchParams: Promise<{
     callbackUrl: string;
   }>;
@@ -40,17 +41,17 @@ const SignInPage = async (props: {
               priority={true}
             />
           </Link>
-          <CardTitle className="text-center">Sign In</CardTitle>
+          <CardTitle className="text-center">Sign Up</CardTitle>
           <CardDescription className="text-center">
-            Sign In to your Account
+            Sign Up your Account
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <SignInForm />
+          <SignUpForm />
         </CardContent>
       </Card>
     </div>
   );
 };
 
-export default SignInPage;
+export default SignUpPage;
