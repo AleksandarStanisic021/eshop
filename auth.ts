@@ -4,8 +4,6 @@ import { prisma } from "./db/prisma";
 import CredetialsProvider from "next-auth/providers/credentials";
 import { compareSync } from "bcrypt-ts-edge";
 import type { NextAuthConfig } from "next-auth";
-import { use } from "react";
-import { split } from "postcss/lib/list";
 
 export const config = {
   pages: {
