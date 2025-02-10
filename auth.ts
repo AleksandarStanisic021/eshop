@@ -48,7 +48,6 @@ export const config = {
     }),
   ],
   callbacks: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async session({ session, user, trigger, token }: any) {
       session.user.id = token.sub;
       session.user.role = token.role;
@@ -61,7 +60,7 @@ export const config = {
       }
       return session;
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
     async jwt({ token, user }: any) {
       if (user) {
         token.role = user.role;
@@ -75,7 +74,7 @@ export const config = {
       }
       return token;
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
     authorized({ request }: any) {
       // Check for cart cookie
       if (!request.cookies.get("sessionCartId")) {
@@ -92,7 +91,6 @@ export const config = {
           },
         });
 
-        // Set the newly generated sessionCartId in the response cookies
         response.cookies.set("sessionCartId", sessionCartId);
 
         // Return the response with the sessionCartId set
