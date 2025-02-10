@@ -59,7 +59,7 @@ export const config = {
       return session;
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    async jwt({ token, user, trigger, session }: any) {
+    async jwt({ token, user }: any) {
       if (user) {
         token.role = user.role;
         if (user.name === "NO_NAME") {
