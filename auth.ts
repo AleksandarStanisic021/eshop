@@ -74,7 +74,8 @@ export const config = {
       }
       return token;
     },
-    authorized({ request, auth }: any) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    authorized({ request }: any) {
       // Check for cart cookie
       if (!request.cookies.get("sessionCartId")) {
         // Generate cart cookie
