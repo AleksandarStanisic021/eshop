@@ -24,6 +24,7 @@ export const addItemToCart = async (data: z.infer<typeof cartItemSchema>) => {
     const cart = await getMyCart();
     // Parse and validate submitted item data
     const item = cartItemSchema.parse(data);
+    console.log("ITEM REQUESTED", item.name);
     // Find product in database
     const product = await prisma.product.findFirst({
       where: { id: item.productId },
