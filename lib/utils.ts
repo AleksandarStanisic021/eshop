@@ -18,3 +18,13 @@ export function formatNumber(num: number): string {
 export function formatError(error: any) {
   console.log(error);
 }
+
+export function round2(val: number | string) {
+  if (typeof val === "number") {
+    return Math.round((val + Number.EPSILON) * 100) / 100;
+  } else if (typeof val === "string") {
+    return Math.round((Number(val) + Number.EPSILON) * 100) / 100;
+  } else {
+    throw new Error("Value is not a number or string");
+  }
+}
